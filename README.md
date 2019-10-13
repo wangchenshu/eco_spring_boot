@@ -10,7 +10,7 @@
 ## 歡迎關注
 ### FB
 * [禪念粉絲頁](https://www.facebook.com/%E7%A6%AA%E5%BF%B5-1062013710643908/)
-* [FB Messenger](m.me/1062013710643908)
+* [FB Messenger](http://m.me/1062013710643908)
 
 ### LINE
 * 加入好友 ID: @gjg7645p
