@@ -17,11 +17,6 @@ public class WordsController {
     @Autowired
     WordsRepository wordsRepository;
 
-//    @RequestMapping("/myContext")
-//    public String myContext(@RequestParam(value="name", defaultValue="World") String paramValue) {
-//        return "Hello " + paramValue;
-//    }
-
     @GetMapping("/words/{id}")
     public ApiResponse show(@PathVariable int id) {
         return new ApiResponse(
