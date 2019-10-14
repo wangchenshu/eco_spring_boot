@@ -28,22 +28,22 @@ public class LineBotController {
     @Autowired
     InspirationalsRepository inspirationalsRepository;
 
-	@EventMapping
+    @EventMapping
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
-		String eventStr = event.getMessage().getText();
-		String retStr = "只要輸入 好語、勵志語、自在語 或是 靜思語";
-		
-		if (eventStr.contains("好語")) {
-	        retStr = wordsRepository.findByRandom().get().getWords();
-		} else if(eventStr.contains("自在")) {
-			retStr = wisdomAdagesRepository.findByRandom().get().getWords();
-		} else if(eventStr.contains("靜思")) {
-			retStr = phorismsRepository.findByRandom().get().getWords();
-		} else if(eventStr.contains("勵志")) {
-			retStr = inspirationalsRepository.findByRandom().get().getWords();
-		}
+        String eventStr = event.getMessage().getText();
+        String retStr = "只要輸入 好語、勵志語、自在語 或是 靜思語";
 
-		return new TextMessage(retStr);
+        if (eventStr.contains("好語")) {
+            retStr = wordsRepository.findByRandom().get().getWords();
+        } else if(eventStr.contains("自在")) {
+    	    retStr = wisdomAdagesRepository.findByRandom().get().getWords();
+        } else if(eventStr.contains("靜思")) {
+    	    retStr = phorismsRepository.findByRandom().get().getWords();
+        } else if(eventStr.contains("勵志")) {
+    	    retStr = inspirationalsRepository.findByRandom().get().getWords();
+        }
+
+        return new TextMessage(retStr);
     }
 
     @EventMapping
