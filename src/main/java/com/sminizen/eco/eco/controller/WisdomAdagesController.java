@@ -15,7 +15,7 @@ import com.sminizen.eco.eco.repository.WisdomAdagesRepository;
 public class WisdomAdagesController {
 
     @Autowired
-    WisdomAdagesRepository wisdomAdagesRepository;
+    private WisdomAdagesRepository wisdomAdagesRepository;
 
     @GetMapping("/wisdomAdages/{id}")
     public ApiResponse show(@PathVariable int id) {

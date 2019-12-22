@@ -15,7 +15,7 @@ import com.sminizen.eco.eco.repository.PhorismsRepository;
 public class PhorismsController {
 
     @Autowired
-    PhorismsRepository phorismsRepository;
+    private PhorismsRepository phorismsRepository;
 
     @GetMapping("/phorisms/{id}")
     public ApiResponse show(@PathVariable int id) {

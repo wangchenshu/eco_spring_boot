@@ -15,7 +15,7 @@ import com.sminizen.eco.eco.repository.WordsRepository;
 public class WordsController {
 
     @Autowired
-    WordsRepository wordsRepository;
+    private WordsRepository wordsRepository;
 
     @GetMapping("/words/{id}")
     public ApiResponse show(@PathVariable int id) {

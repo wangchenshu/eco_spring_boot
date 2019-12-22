@@ -17,16 +17,16 @@ import com.sminizen.eco.eco.repository.WordsRepository;
 public class LineBotController {
 
     @Autowired
-    WordsRepository wordsRepository;
+    private WordsRepository wordsRepository;
 
     @Autowired
-    WisdomAdagesRepository wisdomAdagesRepository;
+    private WisdomAdagesRepository wisdomAdagesRepository;
 
     @Autowired
-    PhorismsRepository phorismsRepository;
+    private PhorismsRepository phorismsRepository;
 
     @Autowired
-    InspirationalsRepository inspirationalsRepository;
+    private InspirationalsRepository inspirationalsRepository;
 
     @EventMapping
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {

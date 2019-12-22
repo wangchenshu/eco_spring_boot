@@ -15,7 +15,7 @@ import com.sminizen.eco.eco.repository.InspirationalsRepository;
 public class InspirationalsController {
 
     @Autowired
-    InspirationalsRepository inspirationalsRepository;
+    private InspirationalsRepository inspirationalsRepository;
 
     @GetMapping("/inspirationals/{id}")
     public ApiResponse show(@PathVariable int id) {
