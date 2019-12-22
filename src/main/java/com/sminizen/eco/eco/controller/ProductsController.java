@@ -29,7 +29,6 @@ public class ProductsController {
 
     @GetMapping("/products/{id}")
     public ResponseEntity<Products> showById(@PathVariable(value = "id") int id) {
-        System.out.println("id = " + id);
         return productsService.findById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.badRequest().body(null));
@@ -37,7 +36,6 @@ public class ProductsController {
 
     @GetMapping("/products/name/{name}")
     public ResponseEntity<Products> showByName(@PathVariable(value = "name") String name) {
-        System.out.println("name = " + name);
         return productsService.findByName(name)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.badRequest().body(null));

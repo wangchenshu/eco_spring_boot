@@ -23,7 +23,6 @@ public class ProductsService {
     }
 
     public Optional<Products> findByName(String name) {
-        System.out.println("name = " + name);
         return productsRepository.findByName(name);
     }
 }
