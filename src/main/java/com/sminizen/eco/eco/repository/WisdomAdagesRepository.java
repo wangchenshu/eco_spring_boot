@@ -16,6 +16,6 @@ public interface WisdomAdagesRepository extends JpaRepository<WisdomAdages, Inte
 
 	Optional<WisdomAdages> findById(int id);
 
-	@Query(nativeQuery = true, value = "SELECT * FROM eco_wisdom_adages ORDER BY rand() LIMIT 1")
+	@Query(nativeQuery = true, value = "SELECT * FROM eco_wisdom_adages where length(words) < 60 ORDER BY rand() LIMIT 1")
 	Optional<WisdomAdages> findByRandom();
 }

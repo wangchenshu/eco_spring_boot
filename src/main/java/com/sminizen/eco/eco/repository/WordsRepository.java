@@ -16,6 +16,6 @@ public interface WordsRepository extends JpaRepository<Words, Integer> {
 
 	Optional<Words> findById(int id);
 
-	@Query(nativeQuery = true, value = "SELECT * FROM eco_words ORDER BY rand() LIMIT 1")
+	@Query(nativeQuery = true, value = "SELECT * FROM eco_words where length(words) < 60 ORDER BY rand() LIMIT 1")
 	Optional<Words> findByRandom();
 }

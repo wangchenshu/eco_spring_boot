@@ -16,6 +16,6 @@ public interface PhorismsRepository  extends JpaRepository<Phorisms, Integer> {
 
 	Optional<Phorisms> findById(int id);
 
-	@Query(nativeQuery = true, value = "SELECT * FROM eco_phorisms ORDER BY rand() LIMIT 1")
+	@Query(nativeQuery = true, value = "SELECT * FROM eco_phorisms where length(words) < 60 ORDER BY rand() LIMIT 1")
 	Optional<Phorisms> findByRandom();
 }

@@ -14,6 +14,6 @@ public interface InspirationalsRepository extends JpaRepository<Inspirationals, 
 
 	Optional<Inspirationals> findById(int id);
 
-	@Query(nativeQuery = true, value = "SELECT * FROM eco_inspirationals ORDER BY rand() LIMIT 1")
+	@Query(nativeQuery = true, value = "SELECT * FROM eco_inspirationals where length(words) < 60 ORDER BY rand() LIMIT 1")
 	Optional<Inspirationals> findByRandom();
 }
